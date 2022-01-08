@@ -1,0 +1,21 @@
+[debug] [2022-01-08T06:21:03.878Z] ----------------------------------------------------------------------
+[debug] [2022-01-08T06:21:03.883Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\igalb\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-01-08T06:21:03.884Z] CLI Version:   10.0.1
+[debug] [2022-01-08T06:21:03.885Z] Platform:      win32
+[debug] [2022-01-08T06:21:03.885Z] Node Version:  v16.13.1
+[debug] [2022-01-08T06:21:03.887Z] Time:          Sat Jan 08 2022 08:21:03 GMT+0200 (שעון ישראל (חורף))
+[debug] [2022-01-08T06:21:03.888Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-01-08T06:21:03.903Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-01-08T06:21:03.904Z] > authorizing via signed-in user (igalbog@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\igalb\Documents\Coding\meta-scraper
+

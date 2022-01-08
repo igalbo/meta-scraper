@@ -11,18 +11,18 @@ app.use(cors());
 app.get("/api/*", async (req, res) => {
   console.log(req.params[0]);
   try {
-    const metadata = await scrapeProduct(req.params[0]);
+    const metadata = await scrapeUrl(req.params[0]);
 
-    res.send({ data: [{ metadata }] });
+    res.send(metadata);
   } catch (err) {
     console.error(err.message);
-    res.send(err.message);
+    res.send({ "Error": err.message }); // might append .status(400) to signal error code as a response
   }
 });
 
 app.listen(PORT, () => console.log("Server started on port ", PORT));
 
-async function scrapeProduct(url) {
+async function scrapeUrl(url) {
   let fullUrl = url;
 
   const browser = await puppeteer.launch({
@@ -61,6 +61,11 @@ async function scrapeProduct(url) {
 
   browser.close();
 
+  console.log(metaElements);
+  return metaElements;
+}
+
+// ============= Reversing Hebrew letters ==============
   // Object.keys(metaElements).forEach((key) => {
   //   if (/[\u0590-\u05FF]/.test(metaElements[key])) {
   //     let arr = metaElements[key].split(" ");
@@ -74,11 +79,3 @@ async function scrapeProduct(url) {
   //     metaElements[key] = arr.reverse().join(" ");
   //   }
   // });
-
-  console.log(metaElements);
-  return metaElements;
-}
-
-// scrapeProduct("https://www.ynet.co.il");
-// scrapeProduct("https://www.tastewise.io/");
-// scrapeProduct("https://www.amazon.com/dp/B09G93BDQP");
